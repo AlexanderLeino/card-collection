@@ -1,6 +1,6 @@
 let submitBtn = document.querySelector('button')
 
-submitBtn.addEventListener("click", async (e)=> {
+submitBtn.addEventListener("click", (e)=> {
     e.preventDefault
     const pokemonName = document.getElementById('pokemon-name').value
     const pokemonType = document.getElementById('pokemon-type').value
@@ -11,7 +11,7 @@ submitBtn.addEventListener("click", async (e)=> {
     const artist = document.getElementById('artist').value
     const year = document.getElementById('year').value
     const collection = document.getElementById('collection').value
-    await fetch('/api/pokemon', {
+    fetch('/api/pokemon', {
         method: 'Post',
         body: JSON.stringify({pokemonName, pokemonType, move1, move2, damage1, damage2, artist, year, collection}),
         headers: {
