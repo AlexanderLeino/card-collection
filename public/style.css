@@ -2,35 +2,24 @@ body {
     background-color: azure;
 }
 
-label {
-    font-weight: bold;
-    font-size: 1.15rem;
-}
-
 button {
-    width:100%;
     font-weight: bolder;
-    font-size: 1.33rem;
 }
+
 i {
-    transform: scale(.75);
-}
-.nes-input {
-    transform: scale(.95);
+    transform: scale(.55);
 }
 
-
-#title{
+label {
+    font-size: larger;
     font-weight: bolder;
-    font-size: 4rem;
-    font-family: 'Secular One', sans-serif;
 }
 
-#form-container {
-    width: 39vw;
+.nes-input {
+    max-height: 2.5rem;
 }
 
-label[for='name_field'] {
-    font-size: 28px;
-    margin-left: 16px;
+#title {
+    font-size: 3.5rem;
+    font-weight: bolder;
 }
