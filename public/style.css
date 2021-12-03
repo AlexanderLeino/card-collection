@@ -14,7 +14,17 @@ label {
     font-size: larger;
     font-weight: bolder;
 }
+input {
+    font-weight: bolder;
+}
 
+option {
+    font-weight: bolder;
+}
+
+.form-select {
+    font-weight: bolder;
+}
 .nes-input {
     max-height: 2.5rem;
 }

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
+
 const CardSetSchema = Schema({
     name: {
         type: String,
@@ -45,8 +46,15 @@ const TrainerSchema = Schema({
     },
     cardSet: {
         type: Schema.Types.ObjectId, ref:'CardSet'
+    },
+    quantity: {
+        type: Number,
+        default: 1
     }
 })
+
+const Trainer = mongoose.model('Trainers', TrainerSchema)
+
 const PokemonSchema = Schema({
     name: {
         type: String,
@@ -109,4 +117,4 @@ const PokemonSchema = Schema({
 
 const Pokemon = mongoose.model('Pokemon', PokemonSchema)
 
-module.exports = {Pokemon, CardSet}
+module.exports = {Pokemon, CardSet, Trainer}
