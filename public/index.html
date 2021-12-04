@@ -88,6 +88,18 @@
             <input type="text" id="artist" class="nes-input">
           </div>
 
+          <div class="mt-4 mb-3">
+            <select class="form-select nes-input " id="card-type" aria-label="Default select example">
+              <option selected>Card Type</option>
+              <option value="Grass">Holo</option>
+              <option value="Reverse Holo">Reverse Holo</option>
+              <option value="Full Art Holo">Full Art</option>
+              <option value="Full Art Holo">Full Art Rainbow</option>
+              <option value="Full Art Holo">Alternative Art</option>
+              <option value="None of the Above">None of the Above</option>
+            </select>   
+        </div>
+
           <div class="mb-3">
             <label for="name_field" class='nes-text'>What year was the card made?</label>
             <input type="text" id="year" class="nes-input">
@@ -114,7 +126,6 @@
               <option value="Aquapolis">Aquapolis</option>
               <option value="Best of Game">Best of Game</option>
               <option value="Expedition">Expedition</option>
-              
               <option value="EX Power Keepers">EX Power Keepers</option>
               <option value="EX Dragon Frontiers">EX Dragon Frontiers</option>
               <option value="EX Crystal Guardians">EX Crystal Guardians</option>
@@ -132,7 +143,6 @@
               <option value="EX Dragon">EX Dragon</option>
               <option value="EX SandStorm">EX SandStorm</option>
               <option value="EX Ruby & Sapphire">EX Ruby & Sapphire</option>
-
               <option value="Stormfront">Stormfront</option>
               <option value="Legends Awakened">Legends Awakened</option>
               <option value="Majestic Dawn">Majestic Dawn</option>
@@ -141,7 +151,6 @@
               <option value="Mysterious Treasure">Mysterious Treasures</option>
               <option value="DP Black Star Promos">DP Black Star Promos</option>
               <option value="Diamond & Pearl">Diamond & Pearl</option>
-
               <option value="Pop Series 9">Pop Series 9</option>
               <option value="Pop Series 8">Pop Series 8</option>
               <option value="Pop Series 7">Pop Series 7</option>
@@ -152,25 +161,21 @@
               <option value="Pop Series 2">Pop Series 2</option>
               <option value="Pop Series 1">Pop Series 1</option>
               <option value="Nintendo Promos">Nintendo Promos</option>
-
               <option value="Pokemon Rumble">Pokemon Rumble</option>
               <option value="Platinum-Arceus">Platinum-Arceus</option>
               <option value="Platinum - Supreme Victors">Platinum - Supreme Victors</option>
               <option value="Platinum - Rising Rivals">Platinum - Rising Rivals</option>
               <option value="Platinum">Platinum</option>
-
               <option value="HS Triumphant">HS Triumphant</option>
               <option value="HS Undaunted">HS Undaunted</option>
               <option value="HS Unleashed">HS Unleashed</option>
               <option value="HeartGold SoulSilver Promos">HeartGold SoulSilver Promos</option>
               <option value="HeartGold Soul Silver">HeartGold Soul Silver</option>
-
               <option value="Call of Legends">Call of Legends</option>
               <option value="Black & White 2013 (Mcdonalds Collection)">Black & White 2013 (Mcdonalds Collection)<option>
               <option value="Black & White 2012 (Mcdonalds Collection">Black & White 2012 (Mcdonalds Collection)</option>
               <option value="Black & White 2011 (Mcdonalds Collection)">Black & White 2011 (Mcdonalds Collection)</option>
               <option value="Black & White Promos">Black & White Promos</option>
-              
               <option value="Radiant Collection">Radiant Collection</option>
               <option value="Legendary Treasures">Legendary Treasures</option>
               <option value="Plasma Blast">Plasma Blast</option>
@@ -185,10 +190,6 @@
               <option value="Noble Victories">Noble Victories</option>
               <option value="Emerging Powers">Emerging Powers</option>
               <option value="Black & White">Black & White</option>
-
-
-
-
               <option value="Evolutions">Evolutions</option>
               <option value="McDonald's Collection 2016">McDonald's Collection 2016</option>
               <option value="Steam Siege">Steam Siege</option>
@@ -208,10 +209,6 @@
               <option value="Kalos Starter Set">Kalos Starter Set</option>
               <option value="XY Promos">XY Promos</option>
               <option value="XY">XY</option>
-
-
-
-
               <option value="Cosmic Eclipse">Cosmic Eclipse</option>
               <option value="Mcdonalds Collection (2019 France)">Mcdonalds Collection (2019 France)</option>
               <option value="Steam Siege McDonalds Collection (2019)">Steam Siege McDonalds Collection (2019)</option>
@@ -233,11 +230,6 @@
               <option value="Guardians Rishing">Guardians Rishing</option>
               <option value="Sun & Moon Promos">Sun & Moon Promos</option>
               <option value="Sun & Moon">Sun & Moon</option>
-
-
-
-
-
               <option value="Brilliant Stars">Brilliant Stars</option>
               <option value="Fusion Strike">Fusion Strike</option>
               <option value="Celebrations">Celebrations</option>
@@ -253,20 +245,24 @@
               <option value="Rebel Clash">Rebel Clash</option>
               <option value="Sword & Shield Promos">Sword & Shield Promos</option>
               <option value="Sword & Shield">Sword & Shield</option>
-              
-
-
-
-
-
-
             </select>   
         </div>
 
-          <div class="mb-3">
-            <label for="name_field" class='nes-text'>Quantity</label>
-            <input type="text" id="quantity" class="nes-input">
-          </div>
+        <div class="mb-3">
+          <label for="name_field" class='nes-text'>Quantity</label>
+          <input type="text" id="quantity" class="nes-input">
+        </div>
+
+          <div class="mt-4 mb-3">
+            <select class="form-select nes-input " id="card-rarity" aria-label="Default select example">
+              <option selected>What's the cards rarity?</option>
+              <option value="Grass">Common</option>
+              <option value="Grass">Uncommon</option>
+              <option value="Reverse Holo">Rare</option>
+              <option value="Full Art Holo">Ultra Rare</option>
+              <option value="Full Art Holo">Secret Rare</option>
+            </select>   
+        </div>
           
           <div class="container-fluid d-flex justify-content-center mt-3">
             <button type="button" class="nes-btn is-primary">Click Here to Add Your Pokemon to the Pokedex</button>

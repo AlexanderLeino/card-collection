@@ -54,8 +54,19 @@ const PokemonSchema = Schema({
         trim: true,
     },
 
+    cardType: {
+        type: String,
+        required: true,
+    },
+
     cardSet: [{
-        type: Schema.Types.ObjectId, ref: 'CardSet'}],
+        type: Schema.Types.ObjectId, ref: 'CardSet'
+    }],
+        
+    rarity: {
+        type: String,
+        default: 'common'
+    }, 
 
     quantity: {
         type: Number,
