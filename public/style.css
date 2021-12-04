@@ -1,3 +1,7 @@
+* {
+    font-family: 'Patrick Hand', cursive;
+}
+
 body {
     background-color: azure;
 }
@@ -33,3 +37,4 @@ option {
     font-size: 3.5rem;
     font-weight: bolder;
 }
+

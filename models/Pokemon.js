@@ -2,64 +2,13 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 
-const CardSetSchema = Schema({
-    name: {
-        type: String,
-        unique: true,
-        required: true
-    },
-    year: {
-        type: Number,
-        maxlength: 4,
-        required: true,
-    },
-    
-    totalNumberOfCardsInSet: {
-        type: Number,
-        maxlength: 3,
-        required: true,
-    }
-}) 
-
-const CardSet = mongoose.model('CardSet', CardSetSchema)
-
-const TrainerSchema = Schema({
-    name: {
-        type: String,
-        required: true,
-        trim: true,
-    },
-    cardNumber: {
-        type: Number,
-        maxlength: 3,
-        trim: true,
-    },
-    Description: {
-        type: String,
-        required: true,
-        trim: true,
-    },
-    artist: {
-        type: String,
-        required: true,
-        trim: true,
-    },
-    cardSet: {
-        type: Schema.Types.ObjectId, ref:'CardSet'
-    },
-    quantity: {
-        type: Number,
-        default: 1
-    }
-})
-
-const Trainer = mongoose.model('Trainers', TrainerSchema)
 
 const PokemonSchema = Schema({
     name: {
         type: String,
         required: true,
         trim: true,
+        maxlength: 25,
     },
     type: {
         type: String,
@@ -117,4 +66,4 @@ const PokemonSchema = Schema({
 
 const Pokemon = mongoose.model('Pokemon', PokemonSchema)
 
-module.exports = {Pokemon, CardSet, Trainer}
+module.exports = Pokemon

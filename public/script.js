@@ -8,12 +8,17 @@ submitBtn.addEventListener("click", (e)=> {
     const move2 = document.getElementById('move2').value
     const damage1 = document.getElementById('damage1').value
     const damage2 = document.getElementById('damage2').value
+    const move1Description = document.getElementById('move1Description').value
+    const move2Description = document.getElementById('move2Description').value
     const artist = document.getElementById('artist').value
     const year = document.getElementById('year').value
-    const collection = document.getElementById('collection').value
+    const pickedCardSet = document.getElementById('pickedCardSet').value
+    const quantity = document.getElementById('quantity').value
+
+    console.log(pokemonName, pokemonType, move1, move2, damage1, damage2, move1Description, move2Description, artist, pickedCardSet, quantity)
     fetch('/api/pokemon', {
         method: 'Post',
-        body: JSON.stringify({pokemonName, pokemonType, move1, move2, damage1, damage2, artist, year, collection}),
+        body: JSON.stringify({pokemonName, pokemonType, move1, move2, damage1, damage2, move1Description, move2Description, artist, pickedCardSet, quantity}),
         headers: {
             'Content-Type': 'application/json',
         }

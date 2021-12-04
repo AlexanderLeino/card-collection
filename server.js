@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 app.use(routes)
 
-mongoose.connect('mongodb://localhost:27017/pokedex', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost:27017/pokemonDb', {useNewUrlParser: true, useUnifiedTopology: true});
 
 
 

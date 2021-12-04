@@ -8,9 +8,11 @@
     <title>Pokemon Card Collection Database</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Righteous&family=Secular+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Patrick+Hand&family=Righteous&family=Secular+One&display=swap" rel="stylesheet"> 
+
   <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css">
 
@@ -39,15 +41,15 @@
           <div class="mt-4 mb-3">
               <select class="form-select nes-input " id="pokemon-type" aria-label="Default select example">
                 <option selected>Which type is this pokemon?</option>
-                <option value="1">Grass</option>
-                <option value="2">Fire</option>
-                <option value="3">Water</option>
-                <option value="1">Lightning</option>
-                <option value="2">Psychic</option>
-                <option value="3">Fighting</option>
-                <option value="1">Darkness</option>
-                <option value="2">Metal</option>
-                <option value="3">Fairy</option>
+                <option value="Grass">Grass</option>
+                <option value="Fire">Fire</option>
+                <option value="Water">Water</option>
+                <option value="Lightning">Lightning</option>
+                <option value="Psychic">Psychic</option>
+                <option value="Fighting">Fighting</option>
+                <option value="Darkness">Darkness</option>
+                <option value="Metal">Metal</option>
+                <option value="Fairy">Fairy</option>
               </select>   
           </div>
           
@@ -63,7 +65,7 @@
 
           <div class="mb-3">
             <label for="name_field" class='nes-text'>Move 1 Description</label>
-            <input type="text" id="move1" class="nes-input">
+            <input type="text" id="move1Description" class="nes-input">
           </div>
             
           <div class="mb-3">
@@ -78,7 +80,7 @@
 
           <div class="mb-3">
             <label for="name_field" class='nes-text'>Move 2 Description</label>
-            <input type="text" id="move1" class="nes-input">
+            <input type="text" id="move2Description" class="nes-input">
           </div>
           
           <div class="mb-3">
@@ -92,165 +94,165 @@
           </div>
 
           <div class="mt-4 mb-3">
-            <select class="form-select nes-input " id="pokemon-type" aria-label="Default select example">
+            <select class="form-select nes-input " id="pickedCardSet" aria-label="Default select example">
               <option selected>Which card set did it come from?</option>
-              <option value="1">Base Set</option>
-              <option value="2">Jungle</option>
-              <option value="3">Wizards of the Coast Promos</option>
-              <option value="1">Fossil</option>
-              <option value="2">Base Set 2</option>
-              <option value="3">Team Rocket</option>
-              <option value="1">Gym Heros</option>
-              <option value="2">Gym Challenge</option>
-              <option value="3">Neo Destiny</option>
-              <option value="1">Neo Revolution</option>
-              <option value="2">Southern Islands</option>
-              <option value="3">Neo Discovery</option>
-              <option value="3">Neo Genesis</option>
-              <option value="3">Legendary collection</option>
-              <option value="2">Skyridge</option>
-              <option value="3">Aquapolis</option>
-              <option value="3">Best of Game</option>
-              <option value="3">Expedition</option>
+              <option value="Base Set">Base Set</option>
+              <option value="Jungle">Jungle</option>
+              <option value="Wizards of the Coast Promos">Wizards of the Coast Promos</option>
+              <option value="Fossil">Fossil</option>
+              <option value="Base Set 2">Base Set 2</option>
+              <option value="Team Rocket">Team Rocket</option>
+              <option value="Gym Heros">Gym Heros</option>
+              <option value="Gym Challenge">Gym Challenge</option>
+              <option value="Neo Destiny">Neo Destiny</option>
+              <option value=">Neo Revolution">Neo Revolution</option>
+              <option value="Southern Islands">Southern Islands</option>
+              <option value="Neo Discovery">Neo Discovery</option>
+              <option value="Neo Genesis">Neo Genesis</option>
+              <option value="Legendary collection">Legendary collection</option>
+              <option value="Skyridge">Skyridge</option>
+              <option value="Aquapolis">Aquapolis</option>
+              <option value="Best of Game">Best of Game</option>
+              <option value="Expedition">Expedition</option>
               
-              <option value="1">EX Power Keepers</option>
-              <option value="2">EX Dragon Frontiers</option>
-              <option value="3">EX Crystal Guardians</option>
-              <option value="1">EX Holon Phantoms</option>
-              <option value="2">EX Legend Maker</option>
-              <option value="3">EX Delta Species</option>
-              <option value="1">EX Unseen Forces Unown Collection</option>
-              <option value="2">EX Unseen Forces</option>
-              <option value="3">EX Emerald</option>
-              <option value="1">EX Deoxys</option>
-              <option value="2">EX Team Rocket Returns</option>
-              <option value="3">EX FireRed & LeafGreen</option>
-              <option value="3">EX Hidden Legends</option>
-              <option value="3">EX Team Magma Vs Team Aqua</option>
-              <option value="2">EX Dragon</option>
-              <option value="3">EX SandStorm</option>
-              <option value="3">EX Ruby & Sapphire</option>
+              <option value="EX Power Keepers">EX Power Keepers</option>
+              <option value="EX Dragon Frontiers">EX Dragon Frontiers</option>
+              <option value="EX Crystal Guardians">EX Crystal Guardians</option>
+              <option value="EX Holon Phantoms">EX Holon Phantoms</option>
+              <option value="EX Legend Maker">EX Legend Maker</option>
+              <option value="EX Delta Specie">EX Delta Species</option>
+              <option value="EX Unseen Forces Unown Collection">EX Unseen Forces Unown Collection</option>
+              <option value="EX Unseen Forces">EX Unseen Forces</option>
+              <option value="EX Emerald">EX Emerald</option>
+              <option value="EX Deoxys">EX Deoxys</option>
+              <option value="EX Team Rocket Returns">EX Team Rocket Returns</option>
+              <option value="EX FireRed & LeafGreen">EX FireRed & LeafGreen</option>
+              <option value="EX Hidden Legends">EX Hidden Legends</option>
+              <option value="EX Team Magma Vs Team Aqua">EX Team Magma Vs Team Aqua</option>
+              <option value="EX Dragon">EX Dragon</option>
+              <option value="EX SandStorm">EX SandStorm</option>
+              <option value="EX Ruby & Sapphire">EX Ruby & Sapphire</option>
 
-              <option value="1">Stormfront</option>
-              <option value="2">Legends Awakened</option>
-              <option value="3">Majestic Dawn</option>
-              <option value="3">Great Encounters</option>
-              <option value="3">Secret Wonders</option>
-              <option value="2">Mysterious Treasures</option>
-              <option value="3">DP Black Star Promos</option>
-              <option value="3">Diamond & Pearl</option>
+              <option value="Stormfront">Stormfront</option>
+              <option value="Legends Awakened">Legends Awakened</option>
+              <option value="Majestic Dawn">Majestic Dawn</option>
+              <option value="Great Encounters">Great Encounters</option>
+              <option value="Secret Wonders">Secret Wonders</option>
+              <option value="Mysterious Treasure">Mysterious Treasures</option>
+              <option value="DP Black Star Promos">DP Black Star Promos</option>
+              <option value="Diamond & Pearl">Diamond & Pearl</option>
 
-              <option value="1">Pop Series 9</option>
-              <option value="2">Pop Series 8</option>
-              <option value="3">Pop Series 7</option>
-              <option value="3">Pop Series 6</option>
-              <option value="3">Pop Series 5</option>
-              <option value="2">Pop Series 4</option>
-              <option value="3">Pop Series 3</option>
-              <option value="3">Pop Series 2</option>
-              <option value="3">Pop Series 1</option>
-              <option value="3">Nintendo Promos</option>
+              <option value="Pop Series 9">Pop Series 9</option>
+              <option value="Pop Series 8">Pop Series 8</option>
+              <option value="Pop Series 7">Pop Series 7</option>
+              <option value="Pop Series 6">Pop Series 6</option>
+              <option value="Pop Series 5">Pop Series 5</option>
+              <option value="Pop Series 4">Pop Series 4</option>
+              <option value="Pop Series 3">Pop Series 3</option>
+              <option value="Pop Series 2">Pop Series 2</option>
+              <option value="Pop Series 1">Pop Series 1</option>
+              <option value="Nintendo Promos">Nintendo Promos</option>
 
-              <option value="2">Pokemon Rumble</option>
-              <option value="3">Platinum-Arceus</option>
-              <option value="3">Platinum - Supreme Victors</option>
-              <option value="3">Platinum - Rising Rivals</option>
-              <option value="3">Platinum</option>
+              <option value="Pokemon Rumble">Pokemon Rumble</option>
+              <option value="Platinum-Arceus">Platinum-Arceus</option>
+              <option value="Platinum - Supreme Victors">Platinum - Supreme Victors</option>
+              <option value="Platinum - Rising Rivals">Platinum - Rising Rivals</option>
+              <option value="Platinum">Platinum</option>
 
-              <option value="2">HS Triumphant</option>
-              <option value="3">HS Undaunted</option>
-              <option value="3">HS Unleashed</option>
-              <option value="3">HeartGold SoulSilver Promos</option>
-              <option value="3">HeartGold Soul Silver</option>
+              <option value="HS Triumphant">HS Triumphant</option>
+              <option value="HS Undaunted">HS Undaunted</option>
+              <option value="HS Unleashed">HS Unleashed</option>
+              <option value="HeartGold SoulSilver Promos">HeartGold SoulSilver Promos</option>
+              <option value="HeartGold Soul Silver">HeartGold Soul Silver</option>
 
-              <option value="3">Call of Legends</option>
-              <option value="2">Black & White 2013 (Mcdonalds Collection)</option>
-              <option value="3">Black & White 2012 (Mcdonalds Collection)</option>
-              <option value="3">Black & White 2011 (Mcdonalds Collection)</option>
-              <option value="3">Black & White Promos</option>
+              <option value="Call of Legends">Call of Legends</option>
+              <option value="Black & White 2013 (Mcdonalds Collection)">Black & White 2013 (Mcdonalds Collection)<option>
+              <option value="Black & White 2012 (Mcdonalds Collection">Black & White 2012 (Mcdonalds Collection)</option>
+              <option value="Black & White 2011 (Mcdonalds Collection)">Black & White 2011 (Mcdonalds Collection)</option>
+              <option value="Black & White Promos">Black & White Promos</option>
               
-              <option value="3">Radiant Collection</option>
-              <option value="3">Legendary Treasures</option>
-              <option value="3">Plasma Blast</option>
-              <option value="2">Plasma Freeze</option>
-              <option value="3">Plasma Strom</option>
-              <option value="3">Boundaries Crossed</option>
-              <option value="3">Dragon Vault</option>
-              <option value="3">Dragons Exalted</option>
-              <option value="3">Dark Explorers</option>
-              <option value="2">Next Destinies</option>
-              <option value="3">Noble Victories</option>
-              <option value="3">Noble Victories</option>
-              <option value="3">Emerging Powers</option>
-              <option value="3">Black & White</option>
+              <option value="Radiant Collection">Radiant Collection</option>
+              <option value="Legendary Treasures">Legendary Treasures</option>
+              <option value="Plasma Blast">Plasma Blast</option>
+              <option value="Plasma Freeze">Plasma Freeze</option>
+              <option value="Plasma Strom">Plasma Strom</option>
+              <option value="Boundaries Crossed">Boundaries Crossed</option>
+              <option value="Dragon Vault">Dragon Vault</option>
+              <option value="Dragons Exalted">Dragons Exalted</option>
+              <option value="Dark Explorers">Dark Explorers</option>
+              <option value="Next Destinies">Next Destinies</option>
+              <option value="Noble Victories">Noble Victories</option>
+              <option value="Noble Victories">Noble Victories</option>
+              <option value="Emerging Powers">Emerging Powers</option>
+              <option value="Black & White">Black & White</option>
 
 
 
 
-              <option value="3">Evolutions</option>
-              <option value="3">McDonald's Collection 2016</option>
-              <option value="3">Steam Siege</option>
-              <option value="2">Fates Collide</option>
-              <option value="3">Generations</option>
-              <option value="3">BreakPoint</option>
-              <option value="3">McDonald's Collectoin (2015)</option>
-              <option value="3">XY BreakThrough</option>
-              <option value="3">Ancient Origins</option>
-              <option value="2">Roaring Skies</option>
-              <option value="3">Double Crisis</option>
-              <option value="3">Primal Clash</option>
-              <option value="3">Phantom Forces</option>
-              <option value="3">Furious Fists</option>
-              <option value="2">McDonald's Collection (2014)</option>
-              <option value="3">XY Flashfire</option>
-              <option value="3">Kalos Starter Set</option>
-              <option value="3">XY Promos</option>
-              <option value="3">XY</option>
+              <option value="Evolutions">Evolutions</option>
+              <option value="McDonald's Collection 2016">McDonald's Collection 2016</option>
+              <option value="Steam Siege">Steam Siege</option>
+              <option value="Fates Collide">Fates Collide</option>
+              <option value="Generations">Generations</option>
+              <option value="BreakPoint">BreakPoint</option>
+              <option value="McDonald's Collectoin (2015)">McDonald's Collectoin (2015)</option>
+              <option value="XY BreakThrough">XY BreakThrough</option>
+              <option value="Ancient Origins">Ancient Origins</option>
+              <option value="Roaring Skies">Roaring Skies</option>
+              <option value="Double Crisis">Double Crisis</option>
+              <option value="Primal Clash">Primal Clash</option>
+              <option value="Phantom Forces">Phantom Forces</option>
+              <option value="Furious Fists">Furious Fists</option>
+              <option value="McDonald's Collection (2014)">McDonald's Collection (2014)</option>
+              <option value="XY Flashfire">XY Flashfire</option>
+              <option value="Kalos Starter Set">Kalos Starter Set</option>
+              <option value="XY Promos">XY Promos</option>
+              <option value="XY">XY</option>
 
 
 
 
-              <option value="3">Cosmic Eclipse</option>
-              <option value="3">Mcdonalds Collection (2019 France)</option>
-              <option value="3">Steam Siege McDonalds Collection (2019)</option>
-              <option value="2">Hidden Fates</option>
-              <option value="3">Unified Minds</option>
-              <option value="3">Unbroken Bonds</option>
-              <option value="3">Detective Pikachu</option>
-              <option value="3">Team Up</option>
-              <option value="3">Lost Thunder</option>
-              <option value="2">Mcdonalds Collection (2018)</option>
-              <option value="3">Dragon Mystery</option>
-              <option value="3">Celestial Storm</option>
-              <option value="3">Forbidden Light</option>
-              <option value="3">Ultra Prism</option>
-              <option value="2">Crimson Invasion</option>
-              <option value="3">Shining Legends</option>
-              <option value="3">Burning Shadows</option>
-              <option value="3">Mcdonalds Collection (2017)</option>
-              <option value="3">Guardians Rishing</option>
-              <option value="3">Sun & Moon Promos</option>
-              <option value="3">Sun & Moon</option>
+              <option value="Cosmic Eclipse">Cosmic Eclipse</option>
+              <option value="Mcdonalds Collection (2019 France)">Mcdonalds Collection (2019 France)</option>
+              <option value="Steam Siege McDonalds Collection (2019)">Steam Siege McDonalds Collection (2019)</option>
+              <option value="Hidden Fates">Hidden Fates</option>
+              <option value="Unified Minds">Unified Minds</option>
+              <option value="Unbroken Bonds">Unbroken Bonds</option>
+              <option value="Detective Pikachu">Detective Pikachu</option>
+              <option value="Team Up">Team Up</option>
+              <option value="Lost Thunder">Lost Thunder</option>
+              <option value="Mcdonalds Collection (2018)">Mcdonalds Collection (2018)</option>
+              <option value="Dragon Mystery">Dragon Mystery</option>
+              <option value="Celestial Storm">Celestial Storm</option>
+              <option value="Forbidden Light">Forbidden Light</option>
+              <option value="Ultra Prism">Ultra Prism</option>
+              <option value="Crimson Invasion">Crimson Invasion</option>
+              <option value="Shining Legends">Shining Legends</option>
+              <option value="Burning Shadows">Burning Shadows</option>
+              <option value="Mcdonalds Collection (2017)">Mcdonalds Collection (2017)</option>
+              <option value="Guardians Rishing">Guardians Rishing</option>
+              <option value="Sun & Moon Promos">Sun & Moon Promos</option>
+              <option value="Sun & Moon">Sun & Moon</option>
 
 
 
 
 
-              <option value="2">Brilliant Stars</option>
-              <option value="3">Fusion Strike</option>
-              <option value="3">Celebrations</option>
-              <option value="3">Evolving Skies</option>
-              <option value="3">Chilling Reign</option>
-              <option value="3">Battle Styles</option>
-              <option value="2">Shining Fates</option>
-              <option value="3">McDonalds 25Th Anniversary</option>
-              <option value="3">Vivid Voltage</option>
-              <option value="3">Champions Path</option>
-              <option value="3">Pokeon Futsal Promos</option>
-              <option value="2">Darkness Ablaze</option>
-              <option value="3">Rebel Clash</option>
-              <option value="3">Sword & Shield Promos</option>
-              <option value="3">Sword & Shield</option>
+              <option value="Brilliant Stars">Brilliant Stars</option>
+              <option value="Fusion Strike">Fusion Strike</option>
+              <option value="Celebrations">Celebrations</option>
+              <option value="Evolving Skies">Evolving Skies</option>
+              <option value="Chilling Reign">Chilling Reign</option>
+              <option value="Battle Styles">Battle Styles</option>
+              <option value="Shining Fates">Shining Fates</option>
+              <option value="McDonalds 25Th Anniversary">McDonalds 25Th Anniversary</option>
+              <option value="Vivid Voltage">Vivid Voltage</option>
+              <option value="Champions Path">Champions Path</option>
+              <option value="Pokeon Futsal Promos">Pokeon Futsal Promos</option>
+              <option value="Darkness Ablaze">Darkness Ablaze</option>
+              <option value="Rebel Clash">Rebel Clash</option>
+              <option value="Sword & Shield Promos">Sword & Shield Promos</option>
+              <option value="Sword & Shield">Sword & Shield</option>
               
 
 
@@ -262,8 +264,8 @@
         </div>
 
           <div class="mb-3">
-            <label for="name_field" class='nes-text'>Quantity?</label>
-            <input type="text" id="collection" class="nes-input">
+            <label for="name_field" class='nes-text'>Quantity</label>
+            <input type="text" id="quantity" class="nes-input">
           </div>
           
           <div class="container-fluid d-flex justify-content-center mt-3">

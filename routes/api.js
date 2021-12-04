@@ -1,12 +1,12 @@
 const router = require('express').Router()
-const {Pokemon} = require('../models/')
+const db = require('../models/')
 
 //matches api/pokemon
 router.post('/pokemon', ({body}, res) => {
     
-    let {pokemonName, pokemonType, move1, damage1, move2, damage2, artist, year} = body
+    let {pokemonName, pokemonType, move1, move2, damage1, damage2, move1Description, move2Description, artist, pickedCardSet, quantity} = body
     
-    Pokemon.create({name: pokemonName, type: pokemonType, move1, damage1, move2, damage2, artist, year})
+    db.Pokemon.create({name: pokemonName, type: pokemonType, move1, move2, damage1, damage2, move1Description, move2Description, artist, pickedCardSet, quantity})
     res.send("We received the pokemon").status(200)
 })
 
