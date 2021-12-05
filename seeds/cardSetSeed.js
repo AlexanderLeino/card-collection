@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 const {CardSet} = require('../models/')
-console.log(CardSet)
 
 mongoose.connect('mongodb://localhost/pokemonDb', {
   useNewUrlParser: true,
@@ -550,15 +549,6 @@ const CardSetSeed = [
 
 ]
 
-const seedCardSet = () => CardSet.deleteMany({})
-  .then(() => CardSet.collection.insertMany(CardSetSeed))
-  .then((data) => {
-    console.log('records inserted!');
-    process.exit(0);
-  })
-  .catch((err) => {
-    console.error(err);
-    process.exit(1);
-  });
-seedCardSet()
+const seedCardSet = () => CardSet.collection.insertMany(CardSetSeed)
+  
 module.exports = seedCardSet

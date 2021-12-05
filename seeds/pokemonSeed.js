@@ -48,17 +48,6 @@ const pokemonSeed = [
 
 ]
 
-const seedPokemon = () => Pokemon.deleteMany({})
-  .then(() => Pokemon.collection.insertMany(pokemonSeed))
-  .then((data) => {
-    console.log('records inserted!');
-    process.exit(0);
-  })
-  .catch((err) => {
-    console.error(err);
-    process.exit(1);
-  });
-
-seedPokemon()
-
+const seedPokemon = () => Pokemon.collection.insertMany(pokemonSeed)
+ 
 module.exports = seedPokemon

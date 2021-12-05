@@ -40,15 +40,7 @@ const trainerSeed = [
 
 ]
 
-const seedTrainer = () => Trainer.deleteMany({})
-  .then(() => Trainer.collection.insertMany(trainerSeed))
-  .then((data) => {
-    console.log('records inserted!');
-    process.exit(0);
-  })
-  .catch((err) => {
-    console.error(err);
-    process.exit(1);
-  });
-seedTrainer()
+const seedTrainer = () => Trainer.collection.insertMany(trainerSeed)
+
+
 module.exports = seedTrainer

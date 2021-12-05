@@ -11,6 +11,7 @@ mongoose.connect('mongodb://localhost/pokemonDb', {
 
 const seedAll = async () => {
   try{
+      
       await seedCardSet();
       console.log('\n----- CardSets Inserted Into Database -----\n');
 
