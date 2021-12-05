@@ -550,7 +550,7 @@ const CardSetSeed = [
 
 ]
 
-CardSet.deleteMany({})
+const seedCardSet = () => CardSet.deleteMany({})
   .then(() => CardSet.collection.insertMany(CardSetSeed))
   .then((data) => {
     console.log('records inserted!');
@@ -560,3 +560,5 @@ CardSet.deleteMany({})
     console.error(err);
     process.exit(1);
   });
+seedCardSet()
+module.exports = seedCardSet

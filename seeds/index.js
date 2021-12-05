@@ -1,0 +1,30 @@
+
+const seedPokemon= require('./pokemonSeed')
+const seedCardSet = require('./cardSetSeed')
+const seedTrainer = require('./trainerSeed')
+const mongoose = require('mongoose')
+
+mongoose.connect('mongodb://localhost/pokemonDb', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+const seedAll = async () => {
+  try{
+
+      await seedPokemon();
+      console.log('\n----- Pokemon Inserted Into Database -----\n');
+  
+      await seedCardSet();
+      console.log('\n----- CardSets Inserted Into Database -----\n');
+
+      await seedTrainer();
+      console.log('\n----- Trainers Inserted Into Database -----\n');
+     
+      process.exit(0);
+  } catch (e) {
+    console.log(e)
+  }  
+  };
+
+  seedAll();
