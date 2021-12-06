@@ -18,7 +18,7 @@ router.post('/pokemon',  async ({body}, res) => {
 //matches api/pokemon
 router.get('/pokemon', async (req, res) => {
     try {console.log('Get Route was hit')
-    let pokemonData = await db.Pokemon.find({}).populate('originalCardSet')
+    let pokemonData = await db.Pokemon.find({}).populate('OriginalCardSet')
     res.json(pokemonData).status(200)}
     catch(e){
         res.json(e).status(404)
