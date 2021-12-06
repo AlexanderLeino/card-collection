@@ -14,11 +14,10 @@ submitBtn.addEventListener("click", (e)=> {
     const cardType = document.getElementById('card-type').value
     const year = document.getElementById('year').value
     const pickedCardSet = document.getElementById('pickedCardSet').value
-    const cardType = document.getElementById('card-type').value
-    const cardRarity = document.getElementById('card-rarity')
+    const cardRarity = document.getElementById('card-rarity').value
     const quantity = document.getElementById('quantity').value
 
-    console.log(pokemonName, pokemonType, move1, move2, damage1, damage2, move1Description, move2Description, artist, cardType, pickedCardSet, cardType, cardRarity, quantity)
+    console.log( cardRarity, pickedCardSet)
     fetch('/api/pokemon', {
         method: 'Post',
         body: JSON.stringify({pokemonName, pokemonType, move1, move2, damage1, damage2, move1Description, move2Description, artist, cardType, pickedCardSet, cardRarity, quantity}),
