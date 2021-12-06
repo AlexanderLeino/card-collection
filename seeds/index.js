@@ -4,10 +4,15 @@ const seedCardSet = require('./cardSetSeed')
 const seedTrainer = require('./trainerSeed')
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost/pokemonDb', {
+mongoose.connect('mongodb://localhost/pokemonDb',{
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  
+}, async function(){
+  await mongoose.connection.dropDatabase();
+  seedAll()
 });
+
 
 const seedAll = async () => {
   try{
@@ -26,5 +31,3 @@ const seedAll = async () => {
     console.log(e)
   }  
   };
-
-  seedAll();

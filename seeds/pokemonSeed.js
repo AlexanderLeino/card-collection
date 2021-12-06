@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const {Pokemon} = require('../models/')
+const {Pokemon, CardSet} = require('../models/')
 
 mongoose.connect('mongodb://localhost/pokemonDb', {
   useNewUrlParser: true,
@@ -15,7 +15,6 @@ const pokemonSeed = [
         move1Description: "Flip a coin. If heads, discard an energy from your opponent's active pokemon",
         artist: "Yuu Nishida",
         cardType: "None of the Above",
-        originalCardSet: "61ac93eb0488fae3d0d5e72e",
         cardNumber: 86
     },
 
@@ -27,7 +26,6 @@ const pokemonSeed = [
         move1Description: "Flip a coin. If heads, during your opponents next turn preventa all damage from and effects of attacks done to this pokemon.",
         artist: "Souichiriou Gunjima",
         cardType: "Reverse Holo",
-        originalCardSet: "61ac93eb0488fae3d0d5e72e",
         cardNumber: 76
     },
 
@@ -42,12 +40,19 @@ const pokemonSeed = [
       move2Description: "This Pokemon also does 30 damage to itself",
       artist: "NC Empire",
       cardType: "None of the Above",
-      originalCardSet: "61ac93eb0488fae3d0d5e72e",
       cardNumber: 86
   },
 
 ]
 
-const seedPokemon = () => Pokemon.collection.insertMany(pokemonSeed)
+const seedPokemon = async () =>{
+  const cardSet = await CardSet.findOne({})
+  let pokemonSeedsWCardSet = pokemonSeed.map( pokemon=> {
+    pokemon.originalCardSet = [CardSet._id]
+    return pokemon
+  })
+  await Pokemon.collection.insertMany(pokemonSeedsWCardSet)
+  console.log(cardSet)
+} 
  
 module.exports = seedPokemon

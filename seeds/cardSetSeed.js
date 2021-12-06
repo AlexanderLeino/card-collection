@@ -8,7 +8,6 @@ mongoose.connect('mongodb://localhost/pokemonDb', {
 
 const CardSetSeed = [
     {
-        _id: '61ac93eb0488fae3d0d5e72e',
         name: "Base Set",
         year: 1999,
         totalNumberOfCardsInSet: 102
@@ -550,6 +549,6 @@ const CardSetSeed = [
 
 ]
 
-const seedCardSet = () => CardSet.collection.insertMany(CardSetSeed)
+const seedCardSet = async () => await CardSet.collection.insertMany(CardSetSeed)
   
 module.exports = seedCardSet

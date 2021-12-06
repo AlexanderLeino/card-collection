@@ -60,7 +60,7 @@ const PokemonSchema = Schema({
         required: true,
     },
 
-    OriginalCardSet: [{
+    originalCardSet: [{
         type: Schema.Types.ObjectId, ref: 'CardSet'
     }],
         
