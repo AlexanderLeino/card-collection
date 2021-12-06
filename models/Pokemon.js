@@ -1,9 +1,10 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-
+const CardSet = require('./CardSet')
 
 
 const PokemonSchema = Schema({
+
     name: {
         type: String,
         required: true,
@@ -59,7 +60,7 @@ const PokemonSchema = Schema({
         required: true,
     },
 
-    cardSet: [{
+    OriginalCardSet: [{
         type: Schema.Types.ObjectId, ref: 'CardSet'
     }],
         
