@@ -48,7 +48,7 @@ const pokemonSeed = [
 const seedPokemon = async () =>{
   const cardSet = await CardSet.findOne({})
   let pokemonSeedsWCardSet = pokemonSeed.map( pokemon=> {
-    pokemon.originalCardSet = [CardSet._id]
+    pokemon.originalCardSet = [cardSet._id]
     return pokemon
   })
   await Pokemon.collection.insertMany(pokemonSeedsWCardSet)
